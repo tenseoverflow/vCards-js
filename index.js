@@ -31,7 +31,7 @@ var vCard = (function () {
             /**
              * Embed a photo from a file using base-64 encoding (not implemented yet)
              * @param  {string} filename
-             */
+             
             embedFromFile: function(fileLocation) {
               var fs   = require('fs');
               var path = require('path');
@@ -40,6 +40,7 @@ var vCard = (function () {
               this.url = imgData.toString('base64');
               this.base64 = true;
             },
+            */
 
             /**
              * Embed a photo from a base-64 string
@@ -324,7 +325,7 @@ var vCard = (function () {
         /**
          * Save formatted vCard to file
          * @param  {String} filename
-         */
+         
         saveToFile: function(filename) {
             var vCardFormatter = require('./lib/vCardFormatter');
             var contents = vCardFormatter.getFormattedString(this);
@@ -332,6 +333,7 @@ var vCard = (function () {
             var fs = require('fs');
             fs.writeFileSync(filename, contents, { encoding: 'utf8' });
         }
+        */
     };
 });
 
