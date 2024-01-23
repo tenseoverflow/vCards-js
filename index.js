@@ -2,7 +2,7 @@
     vCards-js, Eric J Nesser, November 2014
 ********************************************************************************/
 /*jslint node: true */
-'use strict';
+import { getFormattedString } from './vCardFormatter';
 
 /**
  * Represents a contact that can be imported into Outlook, iOS, Mac OS, Android devices, and more
@@ -318,8 +318,7 @@ var vCard = (function () {
          * @return {String} Formatted vCard in VCF format
          */
         getFormattedString: function() {
-            var vCardFormatter = require('./lib/vCardFormatter');
-            return vCardFormatter.getFormattedString(this);
+            return getFormattedString(this);
         },
 
         /**
